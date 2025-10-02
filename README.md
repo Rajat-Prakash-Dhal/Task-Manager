@@ -14,13 +14,10 @@ A fun, comic book-styled todo list application with timer and calendar features,
 
 ## Setup Instructions
 
-### 1. MongoDB Atlas Configuration
+### MongoDB Atlas Configuration
 
-1. Create a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a new cluster
-3. Set up database access (create a user with password)
-4. Get your connection string from "Connect" > "Connect your application"
-5. Update the `.env` file with your MongoDB connection string:
+
+Update the `.env` file with your MongoDB connection string:
 
 ```env
 MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@cluster0.mongodb.net/taskflow?retryWrites=true&w=majority
@@ -28,34 +25,6 @@ PORT=3000
 ```
 
 Replace `YOUR_USERNAME` and `YOUR_PASSWORD` with your actual MongoDB credentials.
-
-### 2. Installation
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-### 3. Running the Application
-
-Start the server:
-
-```bash
-npm start
-```
-
-Or for development with auto-reload:
-
-```bash
-npm run dev
-```
-
-Open your browser and navigate to:
-
-```
-http://localhost:3000
-```
 
 ## Project Structure
 
@@ -70,10 +39,3 @@ http://localhost:3000
 ├── package.json        # Dependencies and scripts
 └── README.md           # This file
 ```
-
-## API Endpoints
-
-- `GET /api/todos` - Get all todos
-- `POST /api/todos` - Create a new todo
-- `PUT /api/todos/:id` - Update a todo
-- `DELETE /api/todos/:id` - Delete a todo
