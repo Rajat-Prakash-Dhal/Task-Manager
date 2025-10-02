@@ -1,0 +1,897 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Permanent Marker', cursive;
+  background: linear-gradient(to bottom right, #fef08a, #fed7aa, #fca5a5);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.comic-border {
+  border: 3px solid #000;
+}
+
+.comic-border-thin {
+  border: 2px solid #000;
+}
+
+.comic-shadow {
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+.comic-shadow-sm {
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.comic-shadow-lg {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+}
+
+.text-comic {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn-pop:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #ef4444;
+  padding: 1.5rem 2rem;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+  transform: rotate(-2deg);
+}
+
+.logo-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #fef08a;
+}
+
+.logo-title {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.add-form {
+  background: #fef08a;
+  padding: 1rem;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-main {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #000;
+  background: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1rem;
+}
+
+.input-main:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #fef08a;
+}
+
+.btn-details {
+  padding: 0.75rem;
+  background: #c084fc;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-details:hover {
+  background: #a855f7;
+}
+
+.btn-details:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.btn-details svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #86efac;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add:hover {
+  background: #4ade80;
+}
+
+.btn-add:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.btn-add svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.details-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 4px solid #000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-description {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #000;
+  background: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 0.875rem;
+  resize: none;
+}
+
+.input-description:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #fef08a;
+}
+
+.details-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.input-date {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #000;
+  background: white;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.input-date:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #fef08a;
+}
+
+.tag-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-tag {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #000;
+  background: white;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.input-tag:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #fef08a;
+}
+
+.btn-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: #93c5fd;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  font-family: 'Permanent Marker', cursive;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-tag:hover {
+  background: #60a5fa;
+}
+
+.btn-tag:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.btn-tag svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #fbcfe8;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  font-size: 0.875rem;
+}
+
+.tag-remove {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.tag-remove:hover {
+  color: #dc2626;
+}
+
+.filter-bar {
+  background: white;
+  padding: 1rem;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #a5f3fc;
+  border: 2px solid #000;
+  font-family: 'Permanent Marker', cursive;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+.filter-btn:hover {
+  background: #67e8f9;
+}
+
+.filter-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.filter-btn.active {
+  background: #fb923c;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.filter-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.badge {
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  border: 2px solid #000;
+}
+
+.filter-btn.active .badge {
+  background: #f97316;
+}
+
+.filter-btn:not(.active) .badge {
+  background: #67e8f9;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-btn {
+  padding: 0.5rem;
+  background: #fbcfe8;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-btn:hover {
+  background: #f9a8d4;
+}
+
+.view-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.view-btn.active {
+  background: #ec4899;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.view-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+
+.list-view {
+  min-height: 200px;
+}
+
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todo-item {
+  background: white;
+  padding: 1rem;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+  display: flex;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.todo-item:hover {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+  transform: scale(1.01);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+  background: #e5e7eb;
+}
+
+.todo-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #000;
+  background: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-checkbox:hover {
+  background: #86efac;
+}
+
+.todo-checkbox:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.todo-checkbox.checked {
+  background: #86efac;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.todo-checkbox svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: none;
+}
+
+.todo-checkbox.checked svg {
+  display: block;
+}
+
+.todo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.25rem;
+}
+
+.todo-title.completed {
+  text-decoration: line-through;
+}
+
+.todo-description {
+  font-size: 0.875rem;
+  color: #374151;
+  margin-top: 0.25rem;
+}
+
+.todo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.priority-badge {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.priority-low {
+  background: #93c5fd;
+  color: #1e3a8a;
+}
+
+.priority-medium {
+  background: #fde047;
+  color: #854d0e;
+}
+
+.priority-high {
+  background: #f87171;
+  color: #7f1d1d;
+}
+
+.meta-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.meta-badge.date {
+  background: #fdba74;
+  color: #1f2937;
+}
+
+.meta-badge.time {
+  background: #c084fc;
+  color: #1f2937;
+}
+
+.meta-badge.tag {
+  background: #fbcfe8;
+  color: #1f2937;
+}
+
+.meta-badge svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.timer-box {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #a5f3fc;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.timer-display {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.timer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timer-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timer-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.timer-btn.start {
+  background: #86efac;
+}
+
+.timer-btn.start:hover {
+  background: #4ade80;
+}
+
+.timer-btn.pause {
+  background: #fde047;
+}
+
+.timer-btn.pause:hover {
+  background: #facc15;
+}
+
+.timer-btn.reset {
+  background: #9ca3af;
+}
+
+.timer-btn.reset:hover {
+  background: #6b7280;
+}
+
+.timer-btn.save {
+  background: #93c5fd;
+}
+
+.timer-btn.save:hover {
+  background: #60a5fa;
+}
+
+.timer-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.5rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.action-btn.timer {
+  background: #93c5fd;
+}
+
+.action-btn.timer:hover {
+  background: #60a5fa;
+}
+
+.action-btn.edit {
+  background: #fde047;
+}
+
+.action-btn.edit:hover {
+  background: #facc15;
+}
+
+.action-btn.delete {
+  background: #f87171;
+}
+
+.action-btn.delete:hover {
+  background: #ef4444;
+}
+
+.action-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #a5f3fc;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.empty-text {
+  font-size: 1.125rem;
+  color: #374151;
+}
+
+.completion-stats {
+  text-align: center;
+  padding: 0.75rem;
+  background: #86efac;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-view {
+  background: white;
+  padding: 1.5rem;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-title {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: #1f2937;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cal-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cal-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.cal-btn.today {
+  background: #86efac;
+}
+
+.cal-btn.today:hover {
+  background: #4ade80;
+}
+
+.cal-btn.nav {
+  background: #93c5fd;
+  padding: 0.5rem;
+}
+
+.cal-btn.nav:hover {
+  background: #60a5fa;
+}
+
+.cal-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day-header {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  padding: 0.5rem;
+  background: #fde047;
+  border: 2px solid #000;
+}
+
+.day-cell {
+  min-height: 6rem;
+  padding: 0.5rem;
+  border: 2px solid #000;
+  background: white;
+}
+
+.day-cell.other-month {
+  background: #e5e7eb;
+}
+
+.day-cell.today {
+  background: #fef08a;
+  border: 4px solid #ef4444;
+}
+
+.day-number {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.day-cell.today .day-number {
+  color: #dc2626;
+  font-size: 1.125rem;
+}
+
+.day-cell.other-month .day-number {
+  color: #6b7280;
+}
+
+.day-todos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.day-todo {
+  width: 100%;
+  text-align: left;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.day-todo:active {
+  transform: translate(1px, 1px);
+}
+
+.day-todo.completed {
+  background: #86efac;
+  text-decoration: line-through;
+}
+
+.day-todo:not(.completed) {
+  background: #93c5fd;
+}
+
+.day-todo:not(.completed):hover {
+  background: #60a5fa;
+}
+
+.day-more {
+  font-size: 0.75rem;
+  color: #1f2937;
+  font-weight: bold;
+  padding: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .logo-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .form-row {
+    flex-wrap: wrap;
+  }
+
+  .filter-buttons {
+    width: 100%;
+  }
+
+  .filter-btn {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .calendar-grid {
+    gap: 0.25rem;
+  }
+
+  .day-cell {
+    min-height: 4rem;
+    padding: 0.25rem;
+  }
+}
